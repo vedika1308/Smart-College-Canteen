@@ -1,0 +1,346 @@
+Create a complete working website called “Smart College Canteen Pre-Order & Token Management System” for a college mini-project.
+
+Technology
+
+Use:
+
+- PHP
+- MySQL
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5 if needed
+- The website must work on XAMPP localhost
+- Database must be compatible with MySQL/phpMyAdmin
+- Keep the code simple and suitable for a college student to understand and explain.
+
+Main Objective
+
+The website should allow college students to view the canteen menu, select food items, add them to a cart, place a pre-order and receive a digital token number. The canteen/admin should be able to view and manage orders.
+
+Website Pages
+
+1. Home Page — index.php
+
+Create a modern college-canteen homepage with:
+
+- Website name: Smart College Canteen
+- Navigation bar
+- Home
+- Menu
+- My Orders
+- Login/Register
+- Attractive hero section
+- Short description of the system
+- “Order Now” button
+- Benefits section:
+  - Reduces waiting time
+  - Reduces queues
+  - Easy pre-ordering
+  - Digital token system
+  - Organized order management
+
+2. Student Registration — register.php
+
+Create a registration form with:
+
+- Full Name
+- Student ID/Roll Number
+- Email
+- Mobile Number
+- Password
+- Confirm Password
+
+Store registered users securely in MySQL.
+
+3. Student Login — login.php
+
+Create login functionality using:
+
+- Email
+- Password
+
+Use PHP sessions for authentication.
+
+4. Menu Page — menu.php
+
+Display food items using cards.
+
+Each food card should contain:
+
+- Food image
+- Food name
+- Description
+- Price
+- Availability
+- Add to Cart button
+
+Example menu:
+
+- Veg Sandwich — ₹40
+- Masala Dosa — ₹60
+- Vada Pav — ₹20
+- Veg Burger — ₹50
+- Samosa — ₹20
+- Pizza — ₹80
+- Cold Drink — ₹30
+- Tea — ₹15
+- Coffee — ₹25
+
+Allow the admin to add, edit and delete menu items.
+
+5. Cart — cart.php
+
+Show:
+
+- Selected food items
+- Quantity
+- Price
+- Subtotal
+- Total amount
+- Increase/decrease quantity
+- Remove item
+- “Place Pre-Order” button
+
+6. Order Page — order.php
+
+After the student places an order:
+
+- Save the order in MySQL.
+- Generate a unique digital token number.
+- Display:
+  - Order ID
+  - Digital Token Number
+  - Ordered items
+  - Total amount
+  - Order date/time
+  - Order status
+
+Default status should be:
+Pending
+
+7. Order Status — order_status.php
+
+Allow students to view their current order status.
+
+Statuses:
+
+- Pending
+- Confirmed
+- Preparing
+- Ready for Pickup
+- Completed
+- Cancelled
+
+Use clear status badges.
+
+8. Student Dashboard
+
+Create a simple dashboard where the student can:
+
+- View profile
+- View current order
+- View previous orders
+- View digital token
+- Logout
+
+9. Admin Login
+
+Create a separate admin login.
+
+Admin credentials can initially be:
+Email: admin@canteen.com
+Password: admin123
+
+Store admin login securely in the database if possible.
+
+10. Admin Dashboard — admin.php
+
+Create an attractive dashboard showing:
+
+- Total Orders
+- Pending Orders
+- Preparing Orders
+- Ready Orders
+- Completed Orders
+- Total Revenue
+
+Admin should be able to:
+
+- View all orders
+- View order details
+- Update order status
+- Add food items
+- Edit food items
+- Delete food items
+- Mark food as available/unavailable
+
+Database
+
+Create a MySQL database named:
+
+smart_canteen
+
+Create tables such as:
+
+1. users
+
+- id
+- name
+- student_id
+- email
+- mobile
+- password
+- created_at
+
+2. admins
+
+- id
+- name
+- email
+- password
+
+3. menu_items
+
+- id
+- name
+- description
+- price
+- image
+- availability
+- created_at
+
+4. orders
+
+- id
+- user_id
+- token_number
+- total_amount
+- status
+- order_date
+
+5. order_items
+
+- id
+- order_id
+- menu_item_id
+- quantity
+- price
+
+Provide a complete SQL file named:
+
+database.sql
+
+The SQL file should create the database, tables and sample menu data.
+
+Database Connection
+
+Create:
+
+db.php
+
+Use PHP MySQLi or PDO to connect to:
+
+localhost
+
+Username:
+root
+
+Password:
+empty by default
+
+Database:
+smart_canteen
+
+Make the connection easy to change if XAMPP uses different MySQL credentials.
+
+Design
+
+Make the website:
+
+- Modern
+- Clean
+- Professional
+- College-friendly
+- Responsive for mobile, tablet and desktop
+- Easy to navigate
+
+Use a simple attractive canteen theme.
+
+Include:
+
+- Cards
+- Buttons
+- Navigation bar
+- Dashboard cards
+- Tables
+- Forms
+- Order status badges
+- Footer
+
+Do not make the design overly complicated.
+
+Important Functionality
+
+Implement:
+
+- Registration
+- Login/logout
+- PHP sessions
+- Menu display from MySQL
+- Add to cart
+- Update cart quantity
+- Remove from cart
+- Place order
+- Automatic digital token generation
+- Save orders in MySQL
+- Student order history
+- Admin dashboard
+- Admin order management
+- Order status updates
+- Menu management
+- Basic validation
+- Password hashing using PHP password_hash()
+- Protected student/admin pages
+
+Project Structure
+
+Create a clean structure similar to:
+
+smart_canteen/
+│
+├── index.php
+├── login.php
+├── register.php
+├── logout.php
+├── menu.php
+├── cart.php
+├── order.php
+├── order_status.php
+├── dashboard.php
+├── admin_login.php
+├── admin.php
+├── admin_orders.php
+├── admin_menu.php
+├── db.php
+├── style.css
+├── script.js
+├── database.sql
+│
+├── images/
+│
+└── includes/
+├── header.php
+└── footer.php
+
+Important
+
+Generate the actual working source code, not just a design or prototype.
+
+Make sure all PHP pages are connected correctly.
+
+Make sure database queries use the correct table and column names.
+
+Do not use fake buttons or non-working features.
+
+Add comments in the code where necessary so a college student can understand the code.

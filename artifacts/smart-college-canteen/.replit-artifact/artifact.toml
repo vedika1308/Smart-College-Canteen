@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Smart College Canteen"
+description = "A student-friendly canteen pre-order and digital token management web app for browsing meals, managing a cart, placing orders, tracking pickup status, and managing the canteen from an admin view."
+version = "1.0.0"
+id = "artifacts/smart-college-canteen"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23987
+
+[services.development]
+run = "pnpm --filter @workspace/smart-college-canteen run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/smart-college-canteen", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/smart-college-canteen/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23987"
+BASE_PATH = "/"
